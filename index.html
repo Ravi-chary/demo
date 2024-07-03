@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        .spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            border-top: 2px solid red;
+            animation: ravi 2s linear infinite;
+        }
+
+        @keyframes ravi {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .tabs {
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .tab__link {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            background: #3498db;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .tab__link li {
+            margin: 0;
+        }
+
+        .tab__link a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+            transition: background 0.3s;
+        }
+
+        .tab__link a:hover {
+            background: #2980b9;
+        }
+
+        .tab__link .active a {
+            background: #2980b9;
+        }
+
+        .tab-content {
+            border: 1px solid #2980b9;
+            border-radius: 0 5px 5px 5px;
+            padding: 20px;
+            background: white;
+        }
+
+        .tab {
+            display: none;
+        }
+
+        .tab.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <div class="spinner"></div>
+
+    <a href="">one</a>
+    <a href="">Two</a>
+    <a href="">Three</a>
+    <a href="">Fourz</a>
+
+    <div class="tabs">
+        <!-- <ul class="tab__link">
+            <li class="active"><a href="#tab1">Tab1 </a></li>
+            <li><a href="#tab2">Tab2</a></li>
+            <li><a href="#tab3">Tab3</a></li>
+            <li><a href="#tab3">Tab4</a></li>
+        </ul> -->
+        <div class="tab__content">
+            <div id="tab1" class="tab active">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt commodi error esse corporis, atque
+                    voluptatem eaque tenetur ipsam maxime pariatur excepturi id necessitatibus, architecto saepe. Tab1
+                </p>
+            </div>
+            <div id="tab2" class="tab">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt commodi error esse corporis, atque
+                    voluptatem eaque tenetur ipsam maxime pariatur excepturi id necessitatibus, architecto saepe. Tab2
+                </p>
+            </div>
+            <div id="tab3" class="tab">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt commodi error esse corporis, atque
+                    voluptatem eaque tenetur ipsam maxime pariatur excepturi id necessitatibus, architecto saepe. Tab3
+                </p>
+            </div>
+            <div id="tab4" class="tab">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt commodi error esse corporis, atque
+                    voluptatem eaque tenetur ipsam maxime pariatur excepturi id necessitatibus, architecto saepe. Tab3
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
